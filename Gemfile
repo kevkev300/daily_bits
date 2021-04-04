@@ -9,7 +9,9 @@ gem 'pg', '~> 1.1'
 gem 'postmark-rails'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 6.1.3.1'
+gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production
 gem 'sass-rails', '>= 6'
+gem 'sidekiq' # background jobs (e.g. mailing)
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
 
