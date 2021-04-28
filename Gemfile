@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -18,14 +20,15 @@ gem 'webpacker', '~> 5.0'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'dead_end' # enrich unexpected-end errors
 end
 
 group :development do
-  gem 'dead_end' # enrich unexpected-end errors
   gem 'letter_opener' # view emails in browser
   gem 'listen', '~> 3.3'
   gem 'pry-byebug' # debugger
   gem 'rack-mini-profiler', '~> 2.0'
+  gem 'rubocop-rails', require: false
   gem 'spring'
   gem 'web-console', '>= 4.1.0'
 end

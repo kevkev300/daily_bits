@@ -1,0 +1,14 @@
+require:
+  - rubocop-rails
+
+
+Layout/LineLength:
+  Exclude:
+    - config/initializers/devise.rb
+
+Metrics/BlockLength:
+  Exclude:
+    - config/environments/development.rb
+
+Style/Documentation:
+  Enabled: false
