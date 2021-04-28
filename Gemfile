@@ -21,6 +21,9 @@ gem 'webpacker', '~> 5.0'
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dead_end' # enrich unexpected-end errors
+  gem 'factory_bot_rails'
+  gem 'rspec-rails'
+  gem 'rubocop-rspec', require: false
 end
 
 group :development do
