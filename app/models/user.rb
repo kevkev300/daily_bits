@@ -7,4 +7,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable
 
   has_many :lists, dependent: :destroy
+  has_many :subscriptions, dependent: :destroy
 end
