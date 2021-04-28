@@ -20,7 +20,10 @@ group :development, :test do
 end
 
 group :development do
+  gem 'dead_end' # enrich unexpected-end errors
+  gem 'letter_opener' # view emails in browser
   gem 'listen', '~> 3.3'
+  gem 'pry-byebug' # debugger
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'spring'
   gem 'web-console', '>= 4.1.0'
