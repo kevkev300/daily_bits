@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %title DailyBits
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+
+  %body
+    %div
+      %ul
+        %li= link_to t('subscriptions', scope: 'navigation'), subscriptions_path
+        %li= link_to t('lists', scope: 'navigation'), lists_path
+
+    %div
+      = yield

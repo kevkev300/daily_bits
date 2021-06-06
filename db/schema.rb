@@ -16,13 +16,13 @@ ActiveRecord::Schema.define(version: 2021_06_06_125230) do
   enable_extension "plpgsql"
 
   create_table "list_elements", force: :cascade do |t|
-    t.bigint "lists_id", null: false
+    t.bigint "list_id", null: false
     t.string "subject"
     t.text "text"
     t.string "reference"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["lists_id"], name: "index_list_elements_on_lists_id"
+    t.index ["list_id"], name: "index_list_elements_on_list_id"
   end
 
   create_table "lists", force: :cascade do |t|
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 2021_06_06_125230) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "list_elements", "lists", column: "lists_id"
+  add_foreign_key "list_elements", "lists"
   add_foreign_key "lists", "users"
   add_foreign_key "subscriptions", "lists"
   add_foreign_key "subscriptions", "users"
