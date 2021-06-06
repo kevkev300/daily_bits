@@ -1,0 +1,6 @@
+en:
+  activerecord:
+    models:
+      subscription:
+        one: subscription
+        other: subscriptions

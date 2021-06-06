@@ -1,0 +1,10 @@
+en:
+  activerecord:
+    models:
+      list:
+        one: list
+        other: lists
+    attributes:
+      description: description
+      id: ID
+      name: name

@@ -1,0 +1,9 @@
+en:
+  lists:
+    edit:
+      title: Edit List
+    index:
+      title: Lists Created by Me
+      new_list: Create New List
+    new:
+      title: Create New List

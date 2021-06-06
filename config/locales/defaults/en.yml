@@ -1,0 +1,10 @@
+en:
+  destroy: delete
+  basic_confirm: Sure?
+  flashs:
+    action_successful: Action successfully executed.
+    action_failed: Action could not be executed.
+  helpers:
+    submit:
+      list:
+        create: 'Create List'

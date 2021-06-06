@@ -320,6 +320,7 @@ DEPENDENCIES
   dotenv-rails
   factory_bot_rails
   haml-rails
+  i18n
   jbuilder (~> 2.7)
   letter_opener
   listen (~> 3.3)
