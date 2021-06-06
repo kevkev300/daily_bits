@@ -20,10 +20,11 @@ gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
 
 group :development, :test do
-  gem 'pry-byebug' # debugger
   gem 'dead_end' # enrich unexpected-end errors
   gem 'factory_bot_rails'
+  gem 'pry-byebug' # debugger
   gem 'rspec-rails'
+  gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
 end
 
@@ -31,7 +32,6 @@ group :development do
   gem 'letter_opener' # view emails in browser
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
-  gem 'rubocop-rails', require: false
   gem 'spring'
   gem 'web-console', '>= 4.1.0'
 end
