@@ -21,6 +21,7 @@ gem 'webpacker', '~> 5.0'
 
 group :development, :test do
   gem 'dead_end' # enrich unexpected-end errors
+  gem 'dotenv-rails' # load .env to ENV
   gem 'factory_bot_rails'
   gem 'pry-byebug' # debugger
   gem 'rspec-rails'
