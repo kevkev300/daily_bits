@@ -1,5 +1,5 @@
 = form_with model: list_element, url: list_list_elements_path(list_element.list) do |f|
-  %div{ data: { 'controller': 'composer', 'composer-list-id-value': list_element.list.id} }
+  %div{ data: { 'controller': 'composer', 'composer-list-preview-url-value': preview_list_list_elements_url(list_element.list) } }
 
     %div{ id: 'error_explanation' }
       - if list_element.errors.any?
@@ -17,7 +17,7 @@
     .actions
       = f.submit
 
-    %div{ data: { 'composer-target': 'output' } }
+    %turbo-frame{ id: 'output', url: '', data: { 'composer-target': 'output' } }
 
   -# %div
   -#   = f.label :description

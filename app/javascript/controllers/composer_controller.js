@@ -4,27 +4,15 @@ import Rails from "@rails/ujs"
 
 export default class extends Controller {
   static targets = ["element", "output"]
-  static values = { "list-id": Number }
+  static values = { listPreviewUrl: String }
 
   connect = () => {
-    this.preview
+    this.preview()
   }
 
   preview = () => {
-    const content = this.elementTarget.value;
-    const listId = this.listIdValue;
-    const preview = this.outputTarget;
-
-    // preview.innerHTML = `<strong>${content}</strong>`
-
-    Rails.ajax({
-      type: "post",
-      url: `/lists/3/list_elements/preview`,
-      contentType: "text/plain",
-      data: content,
-      success: function (data) {
-        preview.innerHTML = data
-      }
-    })
+    let url = new URL(this.listPreviewUrlValue);
+    url.searchParams.append('body', this.elementTarget.value);
+    this.outputTarget.src = url.toString();
   }
 }

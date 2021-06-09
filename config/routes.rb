@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :lists, only: %i[index new create edit update destroy] do
     resources :list_elements do
       collection do
-        post 'preview', to: 'list_elements#preview'
+        get 'preview', to: 'list_elements#preview'
       end
     end
   end

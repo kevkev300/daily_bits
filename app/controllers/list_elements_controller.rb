@@ -1,6 +1,5 @@
 class ListElementsController < ApplicationController
   def preview
-    preview = "<strong>#{request.raw_post}</strong>"
-    render plain: preview
+    @preview = "<strong>#{params[:body]}</strong>"
   end
 end

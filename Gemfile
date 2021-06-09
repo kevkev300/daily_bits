@@ -19,6 +19,7 @@ gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production
 gem 'sass-rails', '>= 6'
 gem 'sidekiq' # background jobs (e.g. mailing)
 gem 'stimulus-rails'
+gem 'turbo-rails'
 gem 'webpacker', '~> 5.0'
 
 group :development, :test do
