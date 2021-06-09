@@ -1,3 +1,6 @@
 %h1= t('.title')
 
 = render 'form', list: @list
+
+%div
+  = render 'list_element_form', list_element: @list_element

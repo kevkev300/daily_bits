@@ -1,0 +1,3 @@
+en:
+  forms:
+    prohibited_from_saving: "%{error_count} %{error_pluralized} prohibited this %{model} from being saved:"

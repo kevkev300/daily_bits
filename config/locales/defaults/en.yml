@@ -1,4 +1,7 @@
 en:
+  error:
+    one: error
+    other: errors
   destroy: delete
   basic_confirm: Sure?
   flashs:

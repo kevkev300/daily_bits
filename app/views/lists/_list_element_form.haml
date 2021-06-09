@@ -1,0 +1,24 @@
+= form_with model: list_element, url: list_list_elements_path(list_element.list) do |f|
+  %div{ data: { 'controller': 'composer', 'composer-list-id-value': list_element.list.id} }
+
+    %div{ id: 'error_explanation' }
+      - if list_element.errors.any?
+        %h2= t('prohibited_from_saving', error_count: list_element.errors.count, error_pluralized: "#{t('error', count: list_element.errors.count)}", model: ListElement.model_name.human, scope: 'forms')
+        %ul
+          - list_element.errors.each do |error|
+            %li= error.full_message
+
+
+    .field
+      = f.label :text
+      = f.text_field :text, placeholder: 'You don’t need a title to be a leader.', data: { 'composer-target': 'element', action: "input->composer#preview" }
+
+
+    .actions
+      = f.submit
+
+    %div{ data: { 'composer-target': 'output' } }
+
+  -# %div
+  -#   = f.label :description
+  -#   = f.text_area :description

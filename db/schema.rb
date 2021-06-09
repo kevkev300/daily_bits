@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 2021_06_06_125230) do
 
   create_table "list_elements", force: :cascade do |t|
     t.bigint "list_id", null: false
-    t.string "subject"
     t.text "text"
     t.string "reference"
     t.datetime "created_at", precision: 6, null: false

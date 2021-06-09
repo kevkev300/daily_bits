@@ -1,3 +1,18 @@
 %h1= t('.title')
 
 = render 'form', list: @list
+
+%div
+  = render 'list_element_form', list_element: @list_element
+
+%div
+  %table
+    %tr
+      %th= ListElement.human_attribute_name(:id)
+      %th= ListElement.human_attribute_name(:reference)
+      %th= ListElement.human_attribute_name(:text)
+    - @list_elements.each do |list|
+      %tr
+        %td= list.id
+        %td= list.reference
+        %td= list.text

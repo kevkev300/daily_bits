@@ -1,0 +1,10 @@
+en:
+  activerecord:
+    models:
+      list_element:
+        one: list element
+        other: list elements
+    attributes:
+      id: ID
+      reference: reference to auther, book...
+      text: text / quote

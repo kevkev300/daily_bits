@@ -22,7 +22,10 @@ class ListsController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    @list_elements = @list.list_elements
+    @list_element = @list.list_elements.new
+  end
 
   def update
     if @list.update(list_params)
